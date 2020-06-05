@@ -4,14 +4,14 @@ import moment from 'moment';
 import './App.css';
 
 const App = () => {
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-
-  console.log(moment().format('h:mm:ss a'));
+  const [hours, setHours] = useState(moment().format('h'));
+  const [minutes, setMinutes] = useState(moment().format('mm'));
+  const [seconds, setSeconds] = useState(moment().format('ss'));
   return (
     <div className='App'>
-      <div className='container'>yo</div>
+      <div className='container'>
+        {hours}:{minutes}:{seconds}
+      </div>
     </div>
   );
 };
