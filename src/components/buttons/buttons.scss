@@ -1,0 +1,42 @@
+.buttons-container {
+  height: 30vh;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+
+  .buttons {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    &__btn {
+      line-height: 60%;
+      text-align: center;
+      display: inline-block;
+      width: 45px;
+      margin: 10px 20px 20px;
+      font-size: 60px;
+
+      padding: 4px;
+      background-color: $prim;
+
+      box-shadow: 0 4px $primDark;
+
+      &:hover {
+        background-color: rgba($prim, 0.8);
+      }
+
+      &:active {
+        transform: translateY(3px);
+        box-shadow: 0 2px $primDark;
+      }
+    }
+
+    &__time {
+      line-height: 100%;
+      display: block;
+      font-size: 50px;
+    }
+  }
+}

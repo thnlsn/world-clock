@@ -1,0 +1,52 @@
+// === COLORS ===
+$prim: #e14f3d;
+$primMedium: #741b16;
+$primDark: #5d1612;
+
+// === BORDER ===
+$darkBorder: #151517;
+
+.clock-container {
+  height: 65vh;
+  position: relative;
+
+  .clock {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 30rem;
+    border-color: $prim;
+    background: url(../../assets/images/Clock_large.png);
+    background-size: cover;
+    /*       box-shadow: -2px 2px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0.5); */
+
+    &__hand-hinge {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      height: 25px;
+      background: $prim;
+      /*         box-shadow: -1px 1px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0); */
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(
+        50% - 4px
+      ); /* -5px because that is half the height of the clock arm (10px) */
+      left: 50%;
+      width: 32%;
+      height: 8px; /* Thickness of the clock arm */
+      background: $darkBorder;
+      border-radius: 5px;
+      transform-origin: left;
+    }
+  }
+}
