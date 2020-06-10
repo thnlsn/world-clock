@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className='App'>
       {hours}:{minutes}:{seconds} {period}
-      <Clock />
+      <Clock hours={hours} />
     </div>
   );
 };
