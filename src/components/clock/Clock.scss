@@ -41,11 +41,11 @@ $darkBorder: #151517;
       content: '';
       position: absolute;
       top: calc(
-        50% - 4px
+        50% - 2px
       ); /* -4px because that is half the height of the clock arm (10px) */
       left: 50%;
       width: 32%;
-      height: 8px; /* Thickness of the clock arm */
+      height: 4px; /* Thickness of the clock arm */
       background: $darkBorder;
       border-radius: 5px;
       transform-origin: left;
