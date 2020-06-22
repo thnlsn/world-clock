@@ -6,14 +6,13 @@ import Clock from './components/clock/Clock';
 import './App.scss';
 
 const App = () => {
-  const [hours, setHours] = useState(moment().format('h'));
+  const [hours, setHours] = useState(null);
   const [minutes, setMinutes] = useState(moment().format('mm'));
   const [seconds, setSeconds] = useState(moment().format('ss'));
   const [period, setPeriod] = useState(moment().format('a'));
 
   const updateTime = () => {
     setInterval(() => {
-      console.log('interval called');
       setHours(moment().format('h'));
       setMinutes(moment().format('mm'));
       setSeconds(moment().format('ss'));

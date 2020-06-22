@@ -20,6 +20,7 @@ const Clock = ({ hours, seconds, minutes }) => {
   useEffect(() => {
     calcDegrees(seconds, 6, setSecDegrees);
     calcDegrees(minutes, 6, setMinDegrees);
+    calcDegrees(hours, 30, setHourDegrees);
   });
 
   return (
@@ -29,16 +30,24 @@ const Clock = ({ hours, seconds, minutes }) => {
           className='clock'
           css={css`
             &:before {
-              transform: rotate(${secDegrees}deg);
+              transform: rotate(${minDegrees}deg);
               transition: 50ms;
             }
             &:after {
-              transform: rotate(${minDegrees}deg);
+              transform: rotate(${secDegrees}deg);
               transition: 50ms;
             }
           `}
         >
-          <span></span>
+          <span
+            className='clock__hour-hand'
+            css={css`
+              &:before {
+                transform: rotate(${hourDegrees}deg);
+                transition: 50ms;
+              }
+            `}
+          ></span>
           <span className='clock__hand-hinge'></span>
         </div>
       </div>

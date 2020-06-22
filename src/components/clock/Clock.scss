@@ -19,8 +19,9 @@ $darkBorder: #151517;
     height: 30rem;
     border: 2rem solid $prim;
     border-radius: 50%;
-    background: url(../../assets/images/Clock_large.png);
+    background: url(../../assets/images/clock.png);
     background-size: cover;
+    background-color: #fff;
     box-shadow: -0.5px 1px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0.5);
 
     &__hand-hinge {
@@ -37,6 +38,20 @@ $darkBorder: #151517;
       z-index: 1;
     }
 
+    &__hour-hand::before {
+      content: '';
+      position: absolute;
+      top: calc(
+        50% - 3px
+      ); /* -4px because that is half the height of the clock arm (10px) */
+      left: 50%;
+      width: 30%;
+      height: 6px; /* Thickness of the clock arm */
+      background: $darkBorder;
+      border-radius: 5px;
+      transform-origin: left;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -44,7 +59,7 @@ $darkBorder: #151517;
         50% - 1.5px
       ); /* -4px because that is half the height of the clock arm (10px) */
       left: 50%;
-      width: 32%;
+      width: 40%;
       height: 3px; /* Thickness of the clock arm */
       background: $darkBorder;
       border-radius: 5px;
@@ -55,12 +70,12 @@ $darkBorder: #151517;
       content: '';
       position: absolute;
       top: calc(
-        50% - 3px
+        50% - 1px
       ); /* -4px because that is half the height of the clock arm (10px) */
       left: 50%;
-      width: 30%;
-      height: 6px; /* Thickness of the clock arm */
-      background: $darkBorder;
+      width: 35%;
+      height: 2px; /* Thickness of the clock arm */
+      background: $primMedium;
       border-radius: 5px;
       transform-origin: left;
     }
