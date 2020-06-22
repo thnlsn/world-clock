@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import './Clock.scss';
 
-const Clock = (hours) => {
+const Clock = ({ hours, seconds, minutes }) => {
   const [degrees, setDegrees] = useState(hours);
 
   // function to calculate degrees to rotate hand
@@ -13,7 +13,7 @@ const Clock = (hours) => {
   return (
     <Fragment>
       <div className='clock-container'>
-        <div className='clock'>
+        <div className='clock degStyle'>
           <span className='clock__hand-hinge'></span>
         </div>
       </div>
@@ -21,8 +21,21 @@ const Clock = (hours) => {
   );
 
   let degStyle = {
-    transform: '',
+    transform: `rotate(${degrees}deg)`,
   };
+
+  /*
+
+<style jsx>{
+
+.clock:before {
+  transform: rotate(${clockStore.deg}deg);
+  }
+}
+
+</style>
+
+  */
 };
 
 export default Clock;
