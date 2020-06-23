@@ -7,12 +7,12 @@ $primDark: #5d1612;
 $darkBorder: #151517;
 
 .clock-container {
-  height: 55vh;
+  height: 50vh;
   position: relative;
 
   .clock {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30rem;
@@ -82,4 +82,25 @@ $darkBorder: #151517;
   }
 
   //borderSolid borderWidth-xl borderRadius-50 bg-cover
+}
+
+@media only screen and (max-width: 600px) {
+  .clock-container {
+    height: 45vh;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+  .clock-container {
+    height: 50vh;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .clock-container {
+    height: 54vh;
+    position: relative;
+  }
 }

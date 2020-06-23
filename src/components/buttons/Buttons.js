@@ -1,15 +1,38 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import './Buttons.scss';
+
+import moment from 'moment';
+import 'moment-timezone';
 
 import Button from './Button';
 
 const Buttons = ({ zones, func }) => {
+  let newArr = ((zones) => {
+    // Empty object
+    let map = [],
+      // Empty array
+      newArr = [];
+    // For as long as the length of zones prop array...
+    for (let i = 0; i < zones.length; i++) {
+      // let v equal the abbv zone
+      let v = moment.tz(zones[i]).format('z');
+      // If it is NOT the case that map at index
+      if (!map[v]) {
+        newArr.push([v, zones[i]]);
+        map[v] = true;
+      }
+    }
+    return newArr;
+  })(zones);
+
   return (
     <Fragment>
       <div className='buttons-container'>
         <div className='buttons'>
-          {zones.map((zone, index) => {
-            return <Button zone={zone} func={func} key={index} />;
+          {newArr.map((zone, index) => {
+            return (
+              <Button zone={zone[1]} abbv={zone[0]} func={func} key={index} />
+            );
           })}
         </div>
       </div>

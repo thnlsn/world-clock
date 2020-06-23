@@ -1,11 +1,13 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import './Buttons.scss';
+import React, { Fragment } from 'react';
 
-const Button = ({ zone, func }) => {
+import moment from 'moment';
+import 'moment-timezone';
+
+const Button = ({ zone, abbv, func }) => {
   return (
     <Fragment>
-      <div className='buttons__btn' onClick={() => func(zone)}>
-        {zone}
+      <div className='buttons__btn unselectable' onClick={() => func(zone)}>
+        {abbv}
       </div>
     </Fragment>
   );

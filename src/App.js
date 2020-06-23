@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import './App.scss';
+
 import moment from 'moment';
 import 'moment-timezone';
 
 import Clock from './components/clock/Clock';
 import Buttons from './components/buttons/Buttons';
 
-import './App.scss';
-
 const App = () => {
-  const usZones = moment.tz.zonesForCountry('US');
+  const usZones = moment.tz.names();
   const [currentZone, setCurrentZone] = useState(moment.tz.guess());
 
   const [hours, setHours] = useState(moment.tz(currentZone).format('h'));
@@ -28,13 +28,8 @@ const App = () => {
     );
 
     const myTimer = (zone) => {
-      if (zone) {
-        updateTime(zone);
-      } else {
-        updateTime(moment.tz.guess());
-      }
-
-      console.log(zone);
+      // If zone is passed in (therefore exists and will evaluate to truthy) then updateTime with zone passed in, otherwise do so with users timezone
+      zone ? updateTime(zone) : updateTime(moment.tz.guess());
     };
   };
 
@@ -66,26 +61,13 @@ const App = () => {
 
   return (
     <div className='App'>
-      {hours}:{minutes}:{seconds} {period} {zone} {currentZone}
+      <div className='time'>
+        {hours}:{minutes}:{seconds} {period} {zone}
+      </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
       <Buttons zones={usZones} func={updateZone} />
     </div>
   );
 };
-
-/*   let myClock = setInterval(() => {
-    updateTime(currentZone);
-  }, 500); */
-
-/*   const startClock = () => {
-    endClock();
-    setInterval(() => {
-      updateTime(currentZone);
-    }, 500);
-  }; */
-
-/*   const endClock = () => {
-    clearInterval(myTimer);
-  }; */
 
 export default App;

@@ -41,3 +41,18 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}

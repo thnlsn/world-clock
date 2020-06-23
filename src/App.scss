@@ -1,5 +1,9 @@
 // Everything that is app-wide but not generic and/or for html/body
 
 .App {
-  /* Appwide code */
+  .time {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+  }
 }

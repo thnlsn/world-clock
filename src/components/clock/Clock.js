@@ -52,19 +52,6 @@ const Clock = ({ hours, seconds, minutes }) => {
       </div>
     </Fragment>
   );
-
-  /*
-
-<style jsx>{
-
-.clock:before {
-  transform: rotate(${clockStore.deg}deg);
-  }
-}
-
-</style>
-
-  */
 };
 
 export default Clock;

@@ -6,6 +6,15 @@ $primDark: #5d1612;
 // === BORDER ===
 $darkBorder: #151517;
 
+.unselectable {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .buttons-container {
   position: relative;
   text-align: center;
@@ -22,23 +31,28 @@ $darkBorder: #151517;
       line-height: 60%;
       text-align: center;
       display: inline-block;
-      margin: 10px 8px;
+      margin: 5px 4px;
       font-size: 1rem;
+      font-weight: bold;
 
-      border-radius: 5px;
-      padding: 4px;
+      border-radius: 10px;
+      padding: 1rem;
       background-color: $prim;
 
-      box-shadow: 0 4px $primDark;
+      box-shadow: 0 3px $primDark;
 
       &:hover {
         background-color: rgba($prim, 0.8);
       }
 
       &:active {
-        transform: translateY(3px);
-        box-shadow: 0 2px $primDark;
+        transform: translateY(2px);
+        box-shadow: 0 1px $primDark;
         transition: 50ms;
+      }
+
+      &:focus {
+        background-color: $primMedium;
       }
     }
 
@@ -46,6 +60,38 @@ $darkBorder: #151517;
       line-height: 100%;
       display: block;
       font-size: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .buttons-container {
+    .buttons {
+      width: 100%;
+      &__btn {
+        margin: 4px 3px;
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  .buttons-container {
+    .buttons {
+      width: 90%;
+      &__btn {
+        margin: 4px 3px;
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .buttons-container {
+    .buttons {
+      width: 60%;
     }
   }
 }
