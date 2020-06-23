@@ -13,15 +13,16 @@ html {
   // Browser default size is 16px, but we want to set it to a percentage in case people with bad eyes have a different default
   // The percentage is 62.5% because it equates to 10px assuming the 16px default
   font-size: 62.5%;
+  height: 100%;
 }
 
 // Setting this is body because fonts will be inherited by child elements
 body {
   background-color: #1c1c1f;
-  background-image: linear-gradient(
+  background-image: repeating-linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1)
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
   );
 
   font-family: Arial, Helvetica, 'Roboto', sans-serif;
@@ -29,12 +30,14 @@ body {
   //   font-size: 1.6rem;
   line-height: 2.2; // 2.2x larger than the default
   color: #fff;
-  padding: 3rem;
+  padding: 1rem;
 
   box-sizing: border-box; // This makes the box model not count borders/paddings in total height/width, and will extend to all children and their children because it is set to inherit in the * selecto
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  min-height: 100vh;
-  font-size: 1.6rem;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

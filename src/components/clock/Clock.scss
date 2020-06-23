@@ -7,12 +7,12 @@ $primDark: #5d1612;
 $darkBorder: #151517;
 
 .clock-container {
-  height: 65vh;
+  height: 55vh;
   position: relative;
 
   .clock {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30rem;
@@ -21,7 +21,7 @@ $darkBorder: #151517;
     border-radius: 50%;
     background: url(../../assets/images/clock.png);
     background-size: cover;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: -0.5px 1px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0.5);
 
     &__hand-hinge {
@@ -30,8 +30,8 @@ $darkBorder: #151517;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 2.7rem;
-      height: 2.7rem;
+      width: 2rem;
+      height: 2rem;
       background: $prim;
       border-radius: 50%;
       /*         box-shadow: -1px 1px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0); */
@@ -48,7 +48,7 @@ $darkBorder: #151517;
       width: 30%;
       height: 6px; /* Thickness of the clock arm */
       background: $darkBorder;
-      border-radius: 5px;
+      border-radius: 0 50% 50% 0;
       transform-origin: left;
     }
 
@@ -59,10 +59,10 @@ $darkBorder: #151517;
         50% - 1.5px
       ); /* -4px because that is half the height of the clock arm (10px) */
       left: 50%;
-      width: 40%;
+      width: 45%;
       height: 3px; /* Thickness of the clock arm */
       background: $darkBorder;
-      border-radius: 5px;
+      border-radius: 0 500% 500% 0;
       transform-origin: left;
     }
 
@@ -70,13 +70,13 @@ $darkBorder: #151517;
       content: '';
       position: absolute;
       top: calc(
-        50% - 1px
+        50% - 0.75px
       ); /* -4px because that is half the height of the clock arm (10px) */
       left: 50%;
       width: 35%;
-      height: 2px; /* Thickness of the clock arm */
+      height: 1.5px; /* Thickness of the clock arm */
       background: $primMedium;
-      border-radius: 5px;
+      border-radius: 0 50% 50% 0;
       transform-origin: left;
     }
   }

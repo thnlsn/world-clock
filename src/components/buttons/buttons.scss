@@ -1,7 +1,13 @@
+// === COLORS ===
+$prim: #e14f3d;
+$primMedium: #741b16;
+$primDark: #5d1612;
+
+// === BORDER ===
+$darkBorder: #151517;
+
 .buttons-container {
-  height: 30vh;
   position: relative;
-  width: 100vw;
   text-align: center;
 
   .buttons {
@@ -10,14 +16,16 @@
     left: 50%;
     transform: translate(-50%, 0%);
 
+    width: 100%;
+
     &__btn {
       line-height: 60%;
       text-align: center;
       display: inline-block;
-      width: 45px;
-      margin: 10px 20px 20px;
-      font-size: 60px;
+      margin: 10px 8px;
+      font-size: 1rem;
 
+      border-radius: 5px;
       padding: 4px;
       background-color: $prim;
 
@@ -30,6 +38,7 @@
       &:active {
         transform: translateY(3px);
         box-shadow: 0 2px $primDark;
+        transition: 50ms;
       }
     }
 
