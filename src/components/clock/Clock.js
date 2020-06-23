@@ -30,7 +30,7 @@ const Clock = ({ hours, seconds, minutes }) => {
           css={css`
             &:before {
               transform: rotate(${minDegrees}deg);
-              transition: 50ms;
+              transition: 250ms;
             }
             &:after {
               transform: rotate(${secDegrees}deg);
@@ -43,7 +43,7 @@ const Clock = ({ hours, seconds, minutes }) => {
             css={css`
               &:before {
                 transform: rotate(${hourDegrees}deg);
-                transition: 50ms;
+                transition: 500ms;
               }
             `}
           ></span>

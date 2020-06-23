@@ -28,7 +28,12 @@ const App = () => {
     );
 
     const myTimer = (zone) => {
-      updateTime(zone);
+      if (zone) {
+        updateTime(zone);
+      } else {
+        updateTime(moment.tz.guess());
+      }
+
       console.log(zone);
     };
   };
