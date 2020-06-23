@@ -17,6 +17,27 @@ const App = () => {
   const [period, setPeriod] = useState(moment.tz(currentZone).format('a'));
   const [zone, setZone] = useState(moment.tz(currentZone).format('z'));
 
+  const [currentInterval, setCurrentInterval] = useState(null);
+
+  const startClock = (zone) => {
+    console.log('Start Clock');
+    setCurrentInterval(
+      setInterval(() => {
+        myTimer(zone);
+      }, 500)
+    );
+
+    const myTimer = (zone) => {
+      updateTime(zone);
+      console.log(zone);
+    };
+  };
+
+  const stopClock = () => {
+    console.log('Stop Clock');
+    clearInterval(currentInterval);
+  };
+
   const updateTime = (zone) => {
     setHours(moment.tz(zone).format('h'));
     setMinutes(moment.tz(zone).format('mm'));
@@ -25,20 +46,17 @@ const App = () => {
     setZone(moment.tz(zone).format('z'));
   };
 
-  const startClock = () => {
-    setInterval(() => {
-      updateTime(currentZone);
-    }, 500);
-  };
-
   const updateZone = (zone) => {
     setCurrentZone(zone);
     updateTime(zone);
+    stopClock();
+
+    startClock(zone);
   };
 
   useEffect(() => {
-    startClock();
     setCurrentZone(moment.tz.guess());
+    startClock();
   }, []);
 
   return (
@@ -49,5 +67,20 @@ const App = () => {
     </div>
   );
 };
+
+/*   let myClock = setInterval(() => {
+    updateTime(currentZone);
+  }, 500); */
+
+/*   const startClock = () => {
+    endClock();
+    setInterval(() => {
+      updateTime(currentZone);
+    }, 500);
+  }; */
+
+/*   const endClock = () => {
+    clearInterval(myTimer);
+  }; */
 
 export default App;
