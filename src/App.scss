@@ -17,6 +17,9 @@ $darkBorder: #151517;
 
   .time {
     text-align: center;
+    line-height: 36px;
+
+    min-width: 25rem;
 
     font-size: 2rem;
     background-color: $gray;
@@ -24,25 +27,40 @@ $darkBorder: #151517;
     box-shadow: -0.5px 1px 0 $darkGray;
     margin-bottom: 1rem;
     margin: 0 auto 1rem auto;
+    padding: 0 4rem 1rem 4rem;
 
     .span {
       vertical-align: top;
     }
   }
+
+  .links {
+    position: absolute;
+    top: 2.3rem;
+    right: 2.7rem;
+
+    .link {
+      margin: 0 1rem;
+      font-size: 2rem;
+    }
+  }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 0px) and (max-width: 480px) {
   /* Styles */
   .App {
     .time {
       width: 80%;
     }
+    .links {
+      width: 3.8rem;
+    }
   }
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
   /* Styles */
   .App {
     .time {

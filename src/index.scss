@@ -1,5 +1,15 @@
 // This is for the low level basics, such as resets and styles for html and body.
 
+// === COLORS ===
+$prim: #e14f3d;
+$primMedium: #741b16;
+$primDark: #5d1612;
+$gray: #7c7c7c;
+$darkGray: #4d4d4d;
+
+// === BORDER ===
+$darkBorder: #151517;
+
 *,
 *::after,
 *::before {
@@ -38,6 +48,20 @@ body {
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: rgba($prim, 1);
+      transition: color 0.5s ease, box-shadow 0.1s ease;
+    }
+
+    &:active {
+      color: rgba($prim, 0.3);
+      transition: color 0.2s ease, box-shadow 0.1s ease;
+    }
+  }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -47,7 +71,7 @@ body {
     /*     body {
       background-color: blue;
     } */
-    font-size: 70%;
+    font-size: 65%;
   }
 }
 

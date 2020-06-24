@@ -69,6 +69,14 @@ const App = () => {
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
       <Buttons zones={usZones} func={updateZone} />
+      <div className='links'>
+        <a className='link' href='https://github.com/thnlsn/world-clock'>
+          <i class='fab fa-github'></i>
+        </a>
+        <a className='link' href='https://www.linkedin.com/in/thnlsn/'>
+          <i class='fab fa-linkedin'></i>
+        </a>
+      </div>
     </div>
   );
 };
