@@ -57,12 +57,15 @@ const App = () => {
   useEffect(() => {
     setCurrentZone(moment.tz.guess());
     startClock();
+    console.log(moment.tz.countries());
   }, []);
 
   return (
     <div className='App'>
       <div className='time'>
-        {hours}:{minutes}:{seconds} {period} {zone}
+        <span>
+          {hours}:{minutes}:{seconds} {period} {zone}
+        </span>
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
       <Buttons zones={usZones} func={updateZone} />

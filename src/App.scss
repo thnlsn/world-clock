@@ -1,9 +1,62 @@
 // Everything that is app-wide but not generic and/or for html/body
 
+// === COLORS ===
+$prim: #e14f3d;
+$primMedium: #741b16;
+$primDark: #5d1612;
+$gray: #7c7c7c;
+$darkGray: #4d4d4d;
+
+// === BORDER ===
+$darkBorder: #151517;
+
 .App {
+  height: 100%;
+  padding: 0 2rem 2rem 2rem;
+  border: 2rem solid $gray;
+
   .time {
     text-align: center;
-    letter-spacing: 0.1rem;
+
     font-size: 2rem;
+    background-color: $gray;
+    border-radius: 0 0 80px 80px;
+    box-shadow: -0.5px 1px 0 $darkGray;
+    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+
+    .span {
+      vertical-align: top;
+    }
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .App {
+    .time {
+      width: 80%;
+    }
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+  .App {
+    .time {
+      width: 50%;
+    }
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .App {
+    .time {
+      width: 20%;
+    }
   }
 }

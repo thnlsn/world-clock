@@ -2,6 +2,8 @@
 $prim: #e14f3d;
 $primMedium: #741b16;
 $primDark: #5d1612;
+$gray: #7c7c7c;
+$darkGray: #4d4d4d;
 
 // === BORDER ===
 $darkBorder: #151517;
@@ -18,14 +20,11 @@ $darkBorder: #151517;
 .buttons-container {
   position: relative;
   text-align: center;
+  vertical-align: bottom;
 
   .buttons {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-
     width: 100%;
+    margin: 0 auto;
 
     &__btn {
       line-height: 60%;
@@ -37,22 +36,23 @@ $darkBorder: #151517;
 
       border-radius: 10px;
       padding: 1rem;
-      background-color: $prim;
 
-      box-shadow: 0 3px $primDark;
+      background-color: $gray;
+      box-shadow: 0 3px $darkGray;
+
+      transition: background-color 2s ease, box-shadow 2s ease;
 
       &:hover {
-        background-color: rgba($prim, 0.8);
+        box-shadow: 0 3px $primMedium;
+        background-color: rgba($prim, 1);
+
+        transition: background-color 0.1s ease, box-shadow 0.1s ease;
       }
 
       &:active {
         transform: translateY(2px);
         box-shadow: 0 1px $primDark;
         transition: 50ms;
-      }
-
-      &:focus {
-        background-color: $primMedium;
       }
     }
 
@@ -64,7 +64,9 @@ $darkBorder: #151517;
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
   .buttons-container {
     .buttons {
       width: 100%;
@@ -76,7 +78,10 @@ $darkBorder: #151517;
     }
   }
 }
-@media only screen and (min-width: 600px) {
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  /* Styles */
   .buttons-container {
     .buttons {
       width: 90%;
@@ -88,10 +93,18 @@ $darkBorder: #151517;
     }
   }
 }
-@media only screen and (min-width: 1200px) {
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
   .buttons-container {
     .buttons {
-      width: 60%;
+      width: 100%;
+      &__btn {
+        margin: 4px 3px;
+        font-size: 1.3rem;
+        font-weight: normal;
+      }
     }
   }
 }

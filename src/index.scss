@@ -30,32 +30,75 @@ body {
   //   font-size: 1.6rem;
   line-height: 2.2; // 2.2x larger than the default
   color: #fff;
-  padding: 1rem;
 
   box-sizing: border-box; // This makes the box model not count borders/paddings in total height/width, and will extend to all children and their children because it is set to inherit in the * selecto
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   height: 100%;
-  margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 600px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
   html {
+    /*     body {
+      background-color: blue;
+    } */
     font-size: 70%;
   }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 600px) {
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
   html {
+    /*     body {
+      background-color: green;
+    } */
     font-size: 80%;
   }
 }
 
-@media only screen and (max-height: 800px) {
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
   html {
-    font-size: 50%;
+    /*     body {
+      background-color: red;
+    } */
+    font-size: 100%;
   }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
 }
