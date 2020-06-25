@@ -1,7 +1,7 @@
 # World Clock
 
 <p align="center">
-  <img src="https://media3.giphy.com/media/h6f8QA5tk54ePIMNnB/giphy.gif" />
+  <img src="https://media.giphy.com/media/h6f8QA5tk54ePIMNnB/source.gif" />
 </p>
 
 <!-- ABOUT THE PROJECT -->
