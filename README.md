@@ -1,8 +1,12 @@
+# World Clock
+
+<p align="center">
+  <img src="https://media3.giphy.com/media/h6f8QA5tk54ePIMNnB/giphy.gif" />
+</p>
+
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-![World Clock](https://media3.giphy.com/media/h6f8QA5tk54ePIMNnB/giphy.gif)
 
 Hello! This is my world clock. It is a live animated analog clock made with pure CSS (via Sass) with added buttons to change the timezone. It was originally built for a job interview take-home project, but I've since streamlined and continued work on it.
 
