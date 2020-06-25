@@ -64,7 +64,6 @@ const App = () => {
   useEffect(() => {
     setCurrentZone(moment.tz.guess());
     startClock();
-    console.log(moment.tz.countries());
   }, []);
 
   return (

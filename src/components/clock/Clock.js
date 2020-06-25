@@ -13,6 +13,9 @@ const Clock = ({ hours, seconds, minutes }) => {
   // function to calculate degrees to rotate hand
   const calcDegrees = (num, deg, cb) => {
     const degreesToAdd = num * deg - 90; // minus 90 because default placement of the hand is 90 degrees past the 12 o'clock placement
+    if (degreesToAdd === 0) {
+      cb(360);
+    }
     cb(degreesToAdd);
   };
 
