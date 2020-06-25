@@ -2,7 +2,7 @@
 
 ## About The Project
 
-[World Clock](https://imgur.com/AYRoRtC)
+![World Clock](https://giphy.com/gifs/h6f8QA5tk54ePIMNnB)
 
 Hello! This is my world clock. It is a live animated analog clock made with pure CSS (via Sass) with added buttons to change the timezone. It was originally built for a job interview take-home project, but I've since streamlined and continued work on it.
 
