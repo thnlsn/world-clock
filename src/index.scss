@@ -1,9 +1,9 @@
 // This is for the low level basics, such as resets and styles for html and body.
 
 // === COLORS ===
-$prim: #e14f3d;
-$primMedium: #741b16;
-$primDark: #5d1612;
+$prim: #ff9100;
+$primMedium: #b97909;
+$primDark: #502907;
 $gray: #7c7c7c;
 $darkGray: #4d4d4d;
 
@@ -23,7 +23,6 @@ html {
   // Browser default size is 16px, but we want to set it to a percentage in case people with bad eyes have a different default
   // The percentage is 62.5% because it equates to 10px assuming the 16px default
   font-size: 62.5%;
-  height: 100%;
 }
 
 // Setting this is body because fonts will be inherited by child elements

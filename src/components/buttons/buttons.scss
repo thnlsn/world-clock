@@ -1,7 +1,7 @@
 // === COLORS ===
-$prim: #e14f3d;
-$primMedium: #741b16;
-$primDark: #5d1612;
+$prim: #ff9100;
+$primMedium: #b97909;
+$primDark: #502907;
 $gray: #7c7c7c;
 $darkGray: #4d4d4d;
 
@@ -18,11 +18,12 @@ $darkBorder: #151517;
 }
 
 .buttons-container {
-  position: relative;
   text-align: center;
   vertical-align: bottom;
 
   .buttons {
+    /*     display: grid;
+    grid-template-columns: repeat(auto-fir, minmax(max-content, 4.5rem)); */
     width: 100%;
     margin: 0 auto;
 
