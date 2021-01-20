@@ -1,7 +1,7 @@
 <div className="App">
   <div className="time">
-    <div className="zone">{zone}</div>
-    <span> {hours}:{minutes}:{seconds} {period} </span>
+    <div className="time__zone heading-primary">{zone}</div>
+    <span className='time__exact heading-secondary'> {hours}:{minutes}:{seconds} {period} </span>
   </div>
 
   <div className='clock-container'>
@@ -40,7 +40,7 @@
 
     </div>
   </div>
-  
+
   <div className="links">
     <a className="link" href="https://github.com/thnlsn/world-clock">
       <i class="fab fa-github"></i>

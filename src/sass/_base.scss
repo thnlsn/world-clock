@@ -22,11 +22,6 @@ html {
   box-sizing: inherit; // Now everything will inherit border-box from html above
 }
 
-/* 
-font-family: 'Exo 2', sans-serif;
-font-family: 'Vollkorn', serif;
-*/
-
 body {
   -webkit-tap-highlight-color: rgba(
     0,
@@ -50,12 +45,13 @@ body {
 
   box-sizing: border-box; // This makes the box model not count borders/paddings in total
 
-  height: 100%;
+  max-height: 100vh;
+
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 ::selection {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-font);
 }

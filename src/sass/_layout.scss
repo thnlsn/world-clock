@@ -1,15 +1,18 @@
 .App {
   display: grid;
-  justify-items: center;
+  grid-template-rows: min-content 5fr min-content min-content;
+  grid-gap: 3rem;
   text-align: center;
 }
 
 .clock-container {
+  justify-self: center;
   position: relative;
 }
 
 .buttons-container {
   justify-self: stretch;
+  padding: 1rem;
 }
 
 .links {

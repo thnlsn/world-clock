@@ -69,9 +69,16 @@ const App = () => {
   return (
     <div className='App'>
       <div className='time'>
-        <div className='zone'>{zone}</div>
-        <span>
-          {hours}:{minutes}:{seconds} {period}
+        <div className='time__heading-container'>
+          <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
+            <line x1='10' y1='10' x2='50' y2='10' className='time__line' />
+          </svg>
+          <div className='time__zone heading-primary'>{zone}</div>
+        </div>
+
+        <span className='time__exact heading-secondary'>
+          {' '}
+          {hours}:{minutes}:{seconds} {period}{' '}
         </span>
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />

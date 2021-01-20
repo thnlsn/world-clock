@@ -10,10 +10,6 @@ html {
   padding: 0;
   box-sizing: inherit; }
 
-/* 
-font-family: 'Exo 2', sans-serif;
-font-family: 'Vollkorn', serif;
-*/
 body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #171e26;
@@ -24,13 +20,37 @@ body {
   font-weight: 400;
   line-height: 2.2;
   box-sizing: border-box;
-  height: 100%;
+  max-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
 ::selection {
   background-color: var(--color-primary);
-  color: var(--color-white); }
+  color: var(--color-font); }
+
+/* 
+font-family: 'Exo 2', sans-serif;
+font-family: 'Vollkorn', serif;
+*/
+.heading-primary {
+  font-family: 'Vollkorn', serif;
+  font-size: 4.5rem;
+  color: #cc992c;
+  font-weight: 600; }
+
+.time__heading-container {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr; }
+
+.time svg {
+  height: 1rem;
+  width: 100%;
+  fill: white;
+  stroke-width: 1rem; }
+
+.time__line {
+  fill: white;
+  stroke-width: 1rem; }
 
 .clock {
   position: relative;
@@ -100,14 +120,17 @@ body {
 
 .App {
   display: grid;
-  justify-items: center;
+  grid-template-rows: min-content 5fr min-content min-content;
+  grid-gap: 3rem;
   text-align: center; }
 
 .clock-container {
+  justify-self: center;
   position: relative; }
 
 .buttons-container {
-  justify-self: stretch; }
+  justify-self: stretch;
+  padding: 1rem; }
 
 .links {
   display: none; }
