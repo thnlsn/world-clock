@@ -1,14 +1,18 @@
 /* 
 font-family: 'Exo 2', sans-serif;
 font-family: 'Vollkorn', serif;
+font-family: 'Vollkorn SC', serif;
 */
 
 .heading-primary {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Vollkorn SC', serif;
   font-size: 4.5rem;
   color: $color-primary-light;
   font-weight: 600;
+  line-height: 1;
 }
 
 .heading-secondary {
+  letter-spacing: 0.35rem;
+  font-weight: 300;
 }

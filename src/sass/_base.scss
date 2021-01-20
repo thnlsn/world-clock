@@ -30,25 +30,20 @@ body {
     0
   ); // To remove the active highlight on mobile taps
   background-color: $color-background;
-  background-image: repeating-linear-gradient(
+  /*   background-image: repeating-linear-gradient(
     to bottom,
     $color-background,
     $color-background-light
-  );
+  ); */
+  /* background by SVGBackgrounds.com */
   font-family: 'Exo 2', sans-serif;
   font-size: 3rem;
   color: $color-font;
 
-  font-weight: 400;
-
-  line-height: 2.2; // 2.2x larger than the default
-
-  box-sizing: border-box; // This makes the box model not count borders/paddings in total
-
   max-height: 100vh;
 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*   background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 ::selection {

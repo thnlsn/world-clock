@@ -42,4 +42,10 @@ export const abbrs = {
   MEST: 'Middle European Summer Time',
   ChST: 'Chamorro Standard Time',
   SST: 'Samoa Standard Time',
+  AKST: 'Alaskan Standard Time',
+  NST: 'Newfoundland Standard Time',
+  AEDT: 'Australian Eastern Daylight Time',
+  NZDT: 'New Zealand Daylight Time',
+  WET: 'Western European Time',
+  MET: 'Middle European Time',
 };

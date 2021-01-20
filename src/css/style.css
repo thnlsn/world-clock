@@ -13,16 +13,18 @@ html {
 body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #171e26;
-  background-image: repeating-linear-gradient(to bottom, #171e26, #22170b);
+  /*   background-image: repeating-linear-gradient(
+    to bottom,
+    $color-background,
+    $color-background-light
+  ); */
+  /* background by SVGBackgrounds.com */
   font-family: 'Exo 2', sans-serif;
   font-size: 3rem;
   color: #d6eaf1;
-  font-weight: 400;
-  line-height: 2.2;
-  box-sizing: border-box;
   max-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  /*   background-repeat: no-repeat;
+  background-attachment: fixed; */ }
 
 ::selection {
   background-color: var(--color-primary);
@@ -31,32 +33,48 @@ body {
 /* 
 font-family: 'Exo 2', sans-serif;
 font-family: 'Vollkorn', serif;
+font-family: 'Vollkorn SC', serif;
 */
 .heading-primary {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Vollkorn SC', serif;
   font-size: 4.5rem;
   color: #cc992c;
-  font-weight: 600; }
+  font-weight: 600;
+  line-height: 1; }
 
-.time__heading-container {
+.heading-secondary {
+  letter-spacing: 0.35rem;
+  font-weight: 300; }
+
+.time {
   display: grid;
-  grid-template-columns: 1fr max-content 1fr; }
-
-.time svg {
-  height: 1rem;
-  width: 100%;
-  fill: white;
-  stroke-width: 1rem; }
-
-.time__line {
-  fill: white;
-  stroke-width: 1rem; }
+  grid-gap: 1rem; }
+  .time__zone {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+    align-items: center;
+    grid-gap: 1rem; }
+    .time__zone:before, .time__zone:after {
+      content: '';
+      height: 2px;
+      background-color: currentColor;
+      transform: translateY(50%);
+      display: block; }
+  .time svg {
+    height: 1rem;
+    width: 100%;
+    fill: white;
+    stroke-width: 1rem; }
+  .time__line {
+    fill: white;
+    stroke-width: 1rem; }
 
 .clock {
   position: relative;
   /*     transform: translate(-50%, -50%); */
-  width: 30rem;
-  height: 30rem;
+  height: 50vh;
+  width: 50vh;
   border: 2rem solid #cc992c;
   border-radius: 50%;
   background: url(../images/clock.png);
@@ -71,7 +89,7 @@ font-family: 'Vollkorn', serif;
     transform: translate(-50%, -50%);
     width: 2rem;
     height: 2rem;
-    background: #4a2f12;
+    background: #171e26;
     border-radius: 50%;
     z-index: 1; }
   .clock__hour-hand::before {
@@ -119,13 +137,13 @@ font-family: 'Vollkorn', serif;
     display: inline-block; }
 
 .App {
+  height: 100vh;
   display: grid;
-  grid-template-rows: min-content 5fr min-content min-content;
-  grid-gap: 3rem;
+  grid-template-rows: min-content;
+  grid-gap: 2rem;
   text-align: center; }
 
 .clock-container {
-  justify-self: center;
   position: relative; }
 
 .buttons-container {

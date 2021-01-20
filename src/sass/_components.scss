@@ -4,12 +4,31 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 .time {
-  &__heading-container {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-  }
+  display: grid;
+  grid-gap: 1rem;
 
   &__zone {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+
+    &:before,
+    &:after {
+      content: '';
+      height: 2px;
+      background-color: currentColor;
+
+      transform: translateY(50%);
+      display: block;
+    }
+
+    &:before {
+    }
+    &:after {
+    }
   }
 
   &_exact {
@@ -37,8 +56,9 @@
   position: relative;
 
   /*     transform: translate(-50%, -50%); */
-  width: 30rem;
-  height: 30rem;
+  height: $clock-size;
+  width: $clock-size;
+
   border: 2rem solid $color-primary-light;
   border-radius: 50%;
   background: url(../images/clock.png);
@@ -54,7 +74,7 @@
     transform: translate(-50%, -50%);
     width: 2rem;
     height: 2rem;
-    background: $color-secondary;
+    background: $color-background;
     border-radius: 50%;
 
     z-index: 1;

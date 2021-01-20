@@ -1,12 +1,15 @@
 .App {
+  height: 100vh;
   display: grid;
-  grid-template-rows: min-content 5fr min-content min-content;
-  grid-gap: 3rem;
+  grid-template-rows: min-content;
+  grid-gap: 2rem;
   text-align: center;
 }
 
+.time {
+}
+
 .clock-container {
-  justify-self: center;
   position: relative;
 }
 
