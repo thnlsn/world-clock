@@ -9,12 +9,6 @@
 }
 
 .time {
-  background: linear-gradient(
-    to bottom,
-    rgba($color: $color-background, $alpha: 0.5),
-    $color-background,
-    rgba($color: $color-background, $alpha: 0.5)
-  );
 }
 
 .clock-container {
@@ -23,11 +17,15 @@
 }
 
 .buttons-container {
+  @include scrollbars(1rem, $color-primary-light, $color-primary-dark);
+
   background-color: $color-background;
 
   overflow-y: scroll;
-  padding: 0 2rem;
-  margin-bottom: 1.75rem;
+
+  margin-bottom: 2rem;
+
+  display: grid;
 }
 
 .links {

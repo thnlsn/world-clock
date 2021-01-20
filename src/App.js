@@ -68,17 +68,17 @@ const App = () => {
 
   return (
     <div className='App'>
-      <div className='time'>
+      <div className='time u-bg-gradient-down'>
         <span className='time__exact heading-secondary'>
           {hours}:{minutes}:{seconds} <span>{period}</span>
         </span>
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
-      <div className='time'>
+      <div className='time u-mb-small u-bg-gradient-up'>
         <div className='time__zone heading-primary'>{zone}</div>
       </div>
       <Buttons zones={usZones} func={updateZone} />
-      <div className='links'>
+      {/*       <div className='links'>
         <a
           className='link'
           target='_blank'
@@ -95,7 +95,7 @@ const App = () => {
         >
           <i class='fab fa-linkedin'></i>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

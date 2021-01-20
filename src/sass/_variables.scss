@@ -16,3 +16,53 @@ $color-font: #d6eaf1;
 $clock-size: 44.25vh;
 
 $border-width: 6px;
+
+.u-mb-small {
+  margin-bottom: 1rem;
+}
+
+.u-bg-gradient-down {
+  background: linear-gradient(
+    to bottom,
+    $color-background,
+    rgba($color: $color-background, $alpha: 0.5)
+  );
+}
+
+.u-bg-gradient-up {
+  background: linear-gradient(
+    to bottom,
+    rgba($color: $color-background, $alpha: 0.5),
+    $color-background
+  );
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

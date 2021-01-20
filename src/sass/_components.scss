@@ -167,23 +167,32 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 .buttons {
+  height: 100%;
   display: grid;
   // 14 10 7 5 2
   /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
   grid-template-columns: repeat(14, 1fr);
-  grid-auto-rows: min-content;
+  grid-template-rows: repeat(5, minmax(min-content, 1fr));
+  grid-auto-rows: minmax(min-content, 1fr);
+  gap: 1rem;
+
+  padding: 0rem 2rem 0rem 2rem;
 
   @media only screen and (max-width: $bp-largest) {
     grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
   @media only screen and (max-width: $bp-large) {
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
   @media only screen and (max-width: $bp-phone-large) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
 
   &__btn {
@@ -191,6 +200,11 @@
     background-color: $color-tertiary;
     border-radius: 5px;
     padding: 0.5rem 0;
+
+    // Center the text inside the buttons
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media only screen and (max-width: $bp-large) {
       padding: 1rem 0;
