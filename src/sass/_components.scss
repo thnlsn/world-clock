@@ -3,80 +3,81 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-.clock-container {
-  height: 50vh;
+.clock {
   position: relative;
 
-  .clock {
-    position: relative;
-    top: 48%;
+  /*     transform: translate(-50%, -50%); */
+  width: 30rem;
+  height: 30rem;
+  border: 2rem solid $color-primary-light;
+  border-radius: 50%;
+  background: url(../images/clock.png);
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -0.5px 1px 0 $color-primary, inset 0 0 40px rgba(0, 0, 0, 0.5);
+
+  &__hand-hinge {
+    display: block;
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 30rem;
-    border: 2rem solid $color-primary-light;
+    width: 2rem;
+    height: 2rem;
+    background: $color-secondary;
     border-radius: 50%;
-    background: url(../images/clock.png);
-    background-size: cover;
-    background-color: rgb(255, 255, 255);
-    box-shadow: -0.5px 1px 0 $color-primary, inset 0 0 40px rgba(0, 0, 0, 0.5);
 
-    &__hand-hinge {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 2rem;
-      height: 2rem;
-      background: $color-primary-light;
-      border-radius: 50%;
-      /*         box-shadow: -1px 1px 0 $color-primary, inset 0 0 20px rgba(0, 0, 0, 0); */
-      z-index: 1;
-    }
-
-    &__hour-hand::before {
-      content: '';
-      position: absolute;
-      top: calc(
-        50% - 3px
-      ); /* -4px because that is half the height of the clock arm (10px) */
-      left: 50%;
-      width: 30%;
-      height: 6px; /* Thickness of the clock arm */
-      background: $color-secondary;
-      border-radius: 0 50% 50% 0;
-      transform-origin: left;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: calc(
-        50% - 1.5px
-      ); /* -4px because that is half the height of the clock arm (10px) */
-      left: 50%;
-      width: 45%;
-      height: 3px; /* Thickness of the clock arm */
-      background: $color-secondary;
-      border-radius: 0 500% 500% 0;
-      transform-origin: left;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: calc(
-        50% - 0.75px
-      ); /* -4px because that is half the height of the clock arm (10px) */
-      left: 50%;
-      width: 35%;
-      height: 1.5px; /* Thickness of the clock arm */
-      background: $color-primary;
-      border-radius: 0 50% 50% 0;
-      transform-origin: left;
-    }
+    z-index: 1;
   }
 
-  //borderSolid borderWidth-xl borderRadius-50 bg-cover
+  &__hour-hand::before {
+    content: '';
+    position: absolute;
+    top: calc(
+      50% - 3px
+    ); /* -4px because that is half the height of the clock arm (10px) */
+    left: 50%;
+    width: 30%;
+    height: 6px; /* Thickness of the clock arm */
+    background: $color-secondary;
+    border-radius: 0 50% 50% 0;
+    transform-origin: left;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(
+      50% - 1.5px
+    ); /* -4px because that is half the height of the clock arm (10px) */
+    left: 50%;
+    width: 45%;
+    height: 3px; /* Thickness of the clock arm */
+    background: $color-secondary;
+    border-radius: 0 500% 500% 0;
+    transform-origin: left;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(
+      50% - 0.75px
+    ); /* -4px because that is half the height of the clock arm (10px) */
+    left: 50%;
+    width: 35%;
+    height: 1.5px; /* Thickness of the clock arm */
+    background: $color-primary;
+    border-radius: 0 50% 50% 0;
+    transform-origin: left;
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1rem;
+  &__btn {
+    display: inline-block;
+  }
 }

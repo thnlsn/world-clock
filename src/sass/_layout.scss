@@ -1,0 +1,17 @@
+.App {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.clock-container {
+  position: relative;
+}
+
+.buttons-container {
+  justify-self: stretch;
+}
+
+.links {
+  display: none;
+}

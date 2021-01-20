@@ -1,0 +1,61 @@
+// RESPONSIVE BREAKPOINTS
+// ----------------------- (x / 16) where x = desired breakpoint in px
+$bp-largest: 87.5em; // ---- 1400px
+$bp-large: 75em; // ---- 1200px
+$bp-medium: 62.5em; // --- 1000px
+$bp-small: 50em; // -- 800px
+$bp-smallest: 37.5em; // ---- 600px
+
+$bp-phone-large: 31.25em; // ---- 500px
+$bp-phone-small: 25em; // ---- 400px
+
+html {
+  box-sizing: border-box; // Border-box is always good
+  font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; // Now everything will inherit border-box from html above
+}
+
+/* 
+font-family: 'Exo 2', sans-serif;
+font-family: 'Vollkorn', serif;
+*/
+
+body {
+  -webkit-tap-highlight-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); // To remove the active highlight on mobile taps
+  background-color: $color-background;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    $color-background,
+    $color-background-light
+  );
+  font-family: 'Exo 2', sans-serif;
+  font-size: 3rem;
+  color: $color-font;
+
+  font-weight: 400;
+
+  line-height: 2.2; // 2.2x larger than the default
+
+  box-sizing: border-box; // This makes the box model not count borders/paddings in total
+
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
