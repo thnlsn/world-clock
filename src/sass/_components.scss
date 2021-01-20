@@ -12,6 +12,9 @@
     align-items: center;
     grid-gap: 2rem;
 
+    padding: 0;
+    margin: 0;
+
     &:before,
     &:after {
       content: '';
@@ -32,7 +35,7 @@
     border-left: $border-width solid $color-primary;
     border-right: $border-width solid $color-primary;
 
-    background: rgba($color: $color-tertiary, $alpha: 0.1);
+    background: rgba($color: $color-background-light, $alpha: 1);
 
     padding: 1rem;
 
@@ -72,12 +75,21 @@
   height: $clock-size;
   width: $clock-size;
 
+  align-self: center;
+
+  margin: 2rem 0;
+
+  // The clock border
   border: 2rem solid $color-primary-light;
   border-radius: 50%;
+
   background: url(../images/clock.png);
   background-size: cover;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -0.5px 1px 0 $color-primary, inset 0 0 40px rgba(0, 0, 0, 0.5);
+
+  background-color: #f7f7f7;
+
+  box-shadow: -1px 2.5px 0 $color-primary-dark,
+    inset 0 0 40px rgba(0, 0, 0, 0.5);
 
   &__hand-hinge {
     display: block;
@@ -89,6 +101,8 @@
     height: 2rem;
     background: $color-background;
     border-radius: 50%;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     z-index: 1;
   }
@@ -105,8 +119,12 @@
     background: $color-primary-dark;
     border-radius: 0 50% 50% 0;
     transform-origin: left;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
+  // Minute hand
   &::before {
     content: '';
     position: absolute;
@@ -119,8 +137,12 @@
     background: $color-primary;
     border-radius: 0 500% 500% 0;
     transform-origin: left;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
+  // Second hand
   &::after {
     content: '';
     position: absolute;
@@ -133,6 +155,9 @@
     background: $color-primary-light;
     border-radius: 0 50% 50% 0;
     transform-origin: left;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 }
 
@@ -143,15 +168,35 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  // 14 10 7 5 2
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+  grid-template-columns: repeat(14, 1fr);
   grid-auto-rows: min-content;
-  gap: 1rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media only screen and (max-width: $bp-phone-large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &__btn {
     display: inline-block;
     background-color: $color-tertiary;
     border-radius: 5px;
     padding: 0.5rem 0;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 1rem 0;
+    }
+
+    border: 1px dotted $color-tertiary-light;
 
     cursor: pointer;
 
@@ -161,6 +206,8 @@
       transition: all 0.15s ease;
       background-color: $color-primary-light;
       color: $color-secondary-light;
+
+      border: 1px dotted $color-primary;
     }
   }
 }
