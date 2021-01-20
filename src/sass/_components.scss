@@ -15,7 +15,8 @@
     &:before,
     &:after {
       content: '';
-      height: 2px;
+
+      height: $border-width;
       background-color: currentColor;
 
       transform: translateY(50%);
@@ -23,19 +24,20 @@
     }
   }
 
+  // The container of the live updating time
   &__exact {
     display: inline-block;
     width: 30rem;
-    border-bottom: 2px solid $color-primary;
-    border-left: 2px solid $color-primary;
-    border-right: 2px solid $color-primary;
+    border-bottom: $border-width solid $color-primary;
+    border-left: $border-width solid $color-primary;
+    border-right: $border-width solid $color-primary;
 
-    background: rgba($color: $color-tertiary, $alpha: 1);
+    background: rgba($color: $color-tertiary, $alpha: 0.1);
 
     padding: 1rem;
 
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 
     span {
       font-size: 60%;
@@ -141,7 +143,7 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-auto-rows: min-content;
   gap: 1rem;
 
@@ -157,8 +159,8 @@
 
     &:hover {
       transition: all 0.15s ease;
-      background-color: $color-primary;
-      color: $color-background;
+      background-color: $color-primary-light;
+      color: $color-secondary-light;
     }
   }
 }

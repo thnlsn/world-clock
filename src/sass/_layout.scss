@@ -5,7 +5,9 @@
   gap: 2rem;
   text-align: center;
 
-  border: 2px solid $color-primary;
+  border: $border-width solid $color-primary;
+
+  padding: 0 0 2rem 0;
 }
 
 .time {
