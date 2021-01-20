@@ -70,7 +70,7 @@ const App = () => {
     <div className='App'>
       <div className='time'>
         <span className='time__exact heading-secondary'>
-          {hours}:{minutes}:{seconds} {period}
+          {hours}:{minutes}:{seconds} <span>{period}</span>
         </span>
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />

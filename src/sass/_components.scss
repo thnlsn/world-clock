@@ -4,16 +4,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 .time {
-  display: grid;
-  grid-gap: 1rem;
-
   &__zone {
     position: relative;
 
     display: grid;
     grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
     align-items: center;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
 
     &:before,
     &:after {
@@ -24,14 +21,15 @@
       transform: translateY(50%);
       display: block;
     }
-
-    &:before {
-    }
-    &:after {
-    }
   }
 
-  &_exact {
+  &__exact {
+    span {
+      font-size: 60%;
+      text-transform: uppercase;
+      color: $color-primary-light;
+      font-weight: 600;
+    }
   }
 
   svg {
@@ -131,8 +129,20 @@
 .buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  grid-gap: 1rem;
+  grid-auto-rows: min-content;
+  gap: 1rem;
+
   &__btn {
     display: inline-block;
+    background-color: $color-tertiary;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+
+    transition: all 0.1s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-background;
+    }
   }
 }

@@ -5,16 +5,12 @@ $color-primary-dark: #785a1a;
 $color-secondary: #4a2f12;
 $color-secondary-light: #66441f;
 
+$color-tertiary: #21478d;
+$color-secondary-dark: #21478d;
+
 $color-background: #171e26;
-$color-background-light: #21478d;
+/* $color-background-light: #21478d; */
 
 $color-font: #d6eaf1;
 
 $clock-size: 50vh;
-
-@mixin viewportRatio($x, $y) {
-  width: 100vw;
-  height: $y * 100vw / $x;
-  max-width: $x / $y * 100vh;
-  max-height: 100vh;
-}

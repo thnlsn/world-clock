@@ -48,4 +48,5 @@ export const abbrs = {
   NZDT: 'New Zealand Daylight Time',
   WET: 'Western European Time',
   MET: 'Middle European Time',
+  ACDT: 'Australian Central Daylight Time',
 };

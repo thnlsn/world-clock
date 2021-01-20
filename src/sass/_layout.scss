@@ -1,9 +1,11 @@
 .App {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: min-content;
-  grid-gap: 2rem;
+  grid-template-rows: max-content max-content max-content 1fr;
+  gap: 2rem;
   text-align: center;
+
+  border: 2px solid $color-primary;
 }
 
 .time {
@@ -11,11 +13,12 @@
 
 .clock-container {
   position: relative;
+  justify-self: center;
 }
 
 .buttons-container {
   justify-self: stretch;
-  padding: 1rem;
+  padding: 0 2.5rem;
 }
 
 .links {

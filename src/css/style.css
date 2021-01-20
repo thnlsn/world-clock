@@ -1,4 +1,5 @@
 /* Style imports (Every partial imported into here will be available app-wide) */
+/* $color-background-light: #21478d; */
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -22,7 +23,7 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 3rem;
   color: #d6eaf1;
-  max-height: 100vh;
+  min-height: 100vh;
   /*   background-repeat: no-repeat;
   background-attachment: fixed; */ }
 
@@ -44,31 +45,37 @@ font-family: 'Vollkorn SC', serif;
 
 .heading-secondary {
   letter-spacing: 0.35rem;
-  font-weight: 300; }
+  font-weight: 400;
+  font-size: 4rem; }
 
-.time {
+.time__zone {
+  position: relative;
   display: grid;
-  grid-gap: 1rem; }
-  .time__zone {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
-    align-items: center;
-    grid-gap: 1rem; }
-    .time__zone:before, .time__zone:after {
-      content: '';
-      height: 2px;
-      background-color: currentColor;
-      transform: translateY(50%);
-      display: block; }
-  .time svg {
-    height: 1rem;
-    width: 100%;
-    fill: white;
-    stroke-width: 1rem; }
-  .time__line {
-    fill: white;
-    stroke-width: 1rem; }
+  grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+  align-items: center;
+  grid-gap: 2rem; }
+  .time__zone:before, .time__zone:after {
+    content: '';
+    height: 2px;
+    background-color: currentColor;
+    transform: translateY(50%);
+    display: block; }
+
+.time__exact span {
+  font-size: 60%;
+  text-transform: uppercase;
+  color: #cc992c;
+  font-weight: 600; }
+
+.time svg {
+  height: 1rem;
+  width: 100%;
+  fill: white;
+  stroke-width: 1rem; }
+
+.time__line {
+  fill: white;
+  stroke-width: 1rem; }
 
 .clock {
   position: relative;
@@ -132,23 +139,33 @@ font-family: 'Vollkorn SC', serif;
 .buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  grid-gap: 1rem; }
+  grid-auto-rows: min-content;
+  gap: 1rem; }
   .buttons__btn {
-    display: inline-block; }
+    display: inline-block;
+    background-color: #21478d;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    transition: all 0.1s; }
+    .buttons__btn:hover {
+      background-color: #b38627;
+      color: #171e26; }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: min-content;
-  grid-gap: 2rem;
-  text-align: center; }
+  grid-template-rows: max-content max-content max-content 1fr;
+  gap: 2rem;
+  text-align: center;
+  border: 2px solid #b38627; }
 
 .clock-container {
-  position: relative; }
+  position: relative;
+  justify-self: center; }
 
 .buttons-container {
   justify-self: stretch;
-  padding: 1rem; }
+  padding: 0 2.5rem; }
 
 .links {
   display: none; }
