@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './App.scss';
+import './css/style.css';
 
 import moment from 'moment';
 import 'moment-timezone';
 
-import { abbrs } from './js/momentZones.js';
+import { abbrs } from './momentZones.js';
 
 import Clock from './components/clock/Clock';
 import Buttons from './components/buttons/Buttons';

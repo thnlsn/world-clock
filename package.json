@@ -1,8 +1,7 @@
 {
-  "homepage": "http://yuribenjamin.github.io/world-clock",
   "name": "world-clock",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@testing-library/jest-dom": "^4.2.4",
@@ -15,11 +14,23 @@
     "react-scripts": "3.4.1",
     "sass": "^1.26.7"
   },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start -b=firefox",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "dev": "npm-run-all -p -r start watch:sass",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss ./src/css/style.comp.css --use autoprefixer -o ./src/css/style.prefix.css",
+    "compress:css": "node-sass ./src/css/style.prefix.css ./src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -37,8 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.1.0"
   }
 }

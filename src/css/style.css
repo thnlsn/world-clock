@@ -1,0 +1,282 @@
+/* Style imports (Every partial imported into here will be available app-wide) */
+.clock-container {
+  height: 50vh;
+  position: relative; }
+  .clock-container .clock {
+    position: relative;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 30rem;
+    border: 2rem solid #c9f1ff;
+    border-radius: 50%;
+    background: url(../images/clock.png);
+    background-size: cover;
+    background-color: white;
+    box-shadow: -0.5px 1px 0 #89b7c7, inset 0 0 40px rgba(0, 0, 0, 0.5); }
+    .clock-container .clock__hand-hinge {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2rem;
+      height: 2rem;
+      background: #c9f1ff;
+      border-radius: 50%;
+      /*         box-shadow: -1px 1px 0 $color-primary, inset 0 0 20px rgba(0, 0, 0, 0); */
+      z-index: 1; }
+    .clock-container .clock__hour-hand::before {
+      content: '';
+      position: absolute;
+      top: calc( 50% - 3px);
+      /* -4px because that is half the height of the clock arm (10px) */
+      left: 50%;
+      width: 30%;
+      height: 6px;
+      /* Thickness of the clock arm */
+      background: #4a2f12;
+      border-radius: 0 50% 50% 0;
+      transform-origin: left; }
+    .clock-container .clock::before {
+      content: '';
+      position: absolute;
+      top: calc( 50% - 1.5px);
+      /* -4px because that is half the height of the clock arm (10px) */
+      left: 50%;
+      width: 45%;
+      height: 3px;
+      /* Thickness of the clock arm */
+      background: #4a2f12;
+      border-radius: 0 500% 500% 0;
+      transform-origin: left; }
+    .clock-container .clock::after {
+      content: '';
+      position: absolute;
+      top: calc( 50% - 0.75px);
+      /* -4px because that is half the height of the clock arm (10px) */
+      left: 50%;
+      width: 35%;
+      height: 1.5px;
+      /* Thickness of the clock arm */
+      background: #89b7c7;
+      border-radius: 0 50% 50% 0;
+      transform-origin: left; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #1c1c1f;
+  background-image: repeating-linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  font-family: Arial, Helvetica, 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 2.2;
+  color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  body a {
+    color: #fff; }
+    body a:hover {
+      color: #ff9100;
+      transition: color 0.5s ease, box-shadow 0.1s ease; }
+    body a:active {
+      color: rgba(255, 145, 0, 0.3);
+      transition: color 0.2s ease, box-shadow 0.1s ease; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  html {
+    /*     body {
+      background-color: blue;
+    } */
+    font-size: 65%; } }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */ }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+  html {
+    /*     body {
+      background-color: green;
+    } */
+    font-size: 80%; } }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Styles */ }
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Styles */ }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  html {
+    /*     body {
+      background-color: red;
+    } */
+    font-size: 100%; } }
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */ }
+
+.App {
+  height: 100%;
+  padding: 0 2rem 2rem 2rem;
+  border: 2rem solid #7c7c7c; }
+  .App .time {
+    text-align: center;
+    line-height: 36px;
+    min-width: 25rem;
+    font-size: 2rem;
+    background-color: #7c7c7c;
+    border-radius: 0 0 80px 80px;
+    box-shadow: -0.5px 1px 0 #4d4d4d;
+    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    padding: 0 2rem 1rem 2rem; }
+    .App .time .zone {
+      font-size: 1.3rem; }
+  .App .links {
+    position: absolute;
+    top: 2.3rem;
+    right: 2.7rem; }
+    .App .links .link {
+      margin: 0 1rem;
+      font-size: 2rem; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  /* Styles */
+  .App .time {
+    width: 80%; }
+    .App .time .zone {
+      font-size: 1.3rem; }
+  .App .links {
+    top: 1.8rem;
+    width: 3.1rem; } }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  /* Styles */
+  .App .time {
+    width: 50%; } }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .App .time {
+    width: 20%; } }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .clock-container {
+    height: 50vh; } }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+  .clock-container {
+    height: 50vh; } }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .clock-container {
+    height: 55vh; } }
+
+.unselectable {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+.buttons-container {
+  text-align: center;
+  vertical-align: bottom; }
+  .buttons-container .buttons {
+    /*     display: grid;
+    grid-template-columns: repeat(auto-fir, minmax(max-content, 4.5rem)); */
+    width: 100%;
+    margin: 0 auto; }
+    .buttons-container .buttons__btn {
+      line-height: 60%;
+      text-align: center;
+      display: inline-block;
+      margin: 5px 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #7c7c7c;
+      box-shadow: 0 3px #4d4d4d;
+      transition: background-color 2s ease, box-shadow 2s ease; }
+      .buttons-container .buttons__btn:hover {
+        box-shadow: 0 3px #b97909;
+        background-color: #ff9100;
+        transition: background-color 0.1s ease, box-shadow 0.1s ease; }
+      .buttons-container .buttons__btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 1px #502907;
+        transition: 50ms; }
+    .buttons-container .buttons__time {
+      line-height: 100%;
+      display: block;
+      font-size: 50px; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .buttons-container .buttons {
+    width: 100%; }
+    .buttons-container .buttons__btn {
+      margin: 4px 3px;
+      font-size: 1.5rem;
+      font-weight: normal; } }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  /* Styles */
+  .buttons-container .buttons {
+    width: 90%; }
+    .buttons-container .buttons__btn {
+      margin: 4px 3px;
+      font-size: 1.5rem;
+      font-weight: normal; } }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .buttons-container .buttons {
+    width: 100%; }
+    .buttons-container .buttons__btn {
+      margin: 4px 3px;
+      font-size: 1.3rem;
+      font-weight: normal; } }

@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import './Buttons.scss';
 
 import moment from 'moment';
 import 'moment-timezone';
@@ -26,17 +25,15 @@ const Buttons = ({ zones, func }) => {
   })(zones);
 
   return (
-    <Fragment>
-      <div className='buttons-container'>
-        <div className='buttons'>
-          {newArr.map((zone, index) => {
-            return (
-              <Button zone={zone[1]} abbv={zone[0]} func={func} key={index} />
-            );
-          })}
-        </div>
+    <div className='buttons-container'>
+      <div className='buttons'>
+        {newArr.map((zone, index) => {
+          return (
+            <Button zone={zone[1]} abbv={zone[0]} func={func} key={index} />
+          );
+        })}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

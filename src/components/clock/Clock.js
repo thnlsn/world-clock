@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import './Clock.scss';
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
@@ -26,34 +25,32 @@ const Clock = ({ hours, seconds, minutes }) => {
   });
 
   return (
-    <Fragment>
-      <div className='clock-container'>
-        <div
-          className='clock'
+    <div className='clock-container'>
+      <div
+        className='clock'
+        css={css`
+          &:before {
+            transform: rotate(${minDegrees}deg);
+            transition: 250ms;
+          }
+          &:after {
+            transform: rotate(${secDegrees}deg);
+            transition: 50ms;
+          }
+        `}
+      >
+        <span
+          className='clock__hour-hand'
           css={css`
             &:before {
-              transform: rotate(${minDegrees}deg);
-              transition: 250ms;
-            }
-            &:after {
-              transform: rotate(${secDegrees}deg);
-              transition: 50ms;
+              transform: rotate(${hourDegrees}deg);
+              transition: 500ms;
             }
           `}
-        >
-          <span
-            className='clock__hour-hand'
-            css={css`
-              &:before {
-                transform: rotate(${hourDegrees}deg);
-                transition: 500ms;
-              }
-            `}
-          ></span>
-          <span className='clock__hand-hinge'></span>
-        </div>
+        ></span>
+        <span className='clock__hand-hinge'></span>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

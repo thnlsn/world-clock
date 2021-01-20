@@ -1,12 +1,7 @@
-// === COLORS ===
-$prim: #ff9100;
-$primMedium: #b97909;
-$primDark: #502907;
-$gray: #7c7c7c;
-$darkGray: #4d4d4d;
-
-// === BORDER ===
-$darkBorder: #151517;
+// CLOCK
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 
 .clock-container {
   height: 50vh;
@@ -19,12 +14,12 @@ $darkBorder: #151517;
     transform: translate(-50%, -50%);
     width: 30rem;
     height: 30rem;
-    border: 2rem solid $prim;
+    border: 2rem solid $color-primary-light;
     border-radius: 50%;
-    background: url(../../assets/images/clock.png);
+    background: url(../images/clock.png);
     background-size: cover;
     background-color: rgb(255, 255, 255);
-    box-shadow: -0.5px 1px 0 $primMedium, inset 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: -0.5px 1px 0 $color-primary, inset 0 0 40px rgba(0, 0, 0, 0.5);
 
     &__hand-hinge {
       display: block;
@@ -34,9 +29,9 @@ $darkBorder: #151517;
       transform: translate(-50%, -50%);
       width: 2rem;
       height: 2rem;
-      background: $prim;
+      background: $color-primary-light;
       border-radius: 50%;
-      /*         box-shadow: -1px 1px 0 $primMedium, inset 0 0 20px rgba(0, 0, 0, 0); */
+      /*         box-shadow: -1px 1px 0 $color-primary, inset 0 0 20px rgba(0, 0, 0, 0); */
       z-index: 1;
     }
 
@@ -49,7 +44,7 @@ $darkBorder: #151517;
       left: 50%;
       width: 30%;
       height: 6px; /* Thickness of the clock arm */
-      background: $darkBorder;
+      background: $color-secondary;
       border-radius: 0 50% 50% 0;
       transform-origin: left;
     }
@@ -63,7 +58,7 @@ $darkBorder: #151517;
       left: 50%;
       width: 45%;
       height: 3px; /* Thickness of the clock arm */
-      background: $darkBorder;
+      background: $color-secondary;
       border-radius: 0 500% 500% 0;
       transform-origin: left;
     }
@@ -77,35 +72,11 @@ $darkBorder: #151517;
       left: 50%;
       width: 35%;
       height: 1.5px; /* Thickness of the clock arm */
-      background: $primMedium;
+      background: $color-primary;
       border-radius: 0 50% 50% 0;
       transform-origin: left;
     }
   }
 
   //borderSolid borderWidth-xl borderRadius-50 bg-cover
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* Styles */
-  .clock-container {
-    height: 50vh;
-  }
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Styles */
-  .clock-container {
-    height: 50vh;
-  }
-}
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-  .clock-container {
-    height: 55vh;
-  }
 }
