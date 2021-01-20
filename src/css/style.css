@@ -61,11 +61,21 @@ font-family: 'Vollkorn SC', serif;
     transform: translateY(50%);
     display: block; }
 
-.time__exact span {
-  font-size: 60%;
-  text-transform: uppercase;
-  color: #cc992c;
-  font-weight: 600; }
+.time__exact {
+  display: inline-block;
+  width: 30rem;
+  border-bottom: 2px solid #b38627;
+  border-left: 2px solid #b38627;
+  border-right: 2px solid #b38627;
+  background: #21478d;
+  padding: 1rem;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%; }
+  .time__exact span {
+    font-size: 60%;
+    text-transform: uppercase;
+    color: #cc992c;
+    font-weight: 600; }
 
 .time svg {
   height: 1rem;
@@ -108,7 +118,7 @@ font-family: 'Vollkorn SC', serif;
     width: 30%;
     height: 6px;
     /* Thickness of the clock arm */
-    background: #4a2f12;
+    background: #785a1a;
     border-radius: 0 50% 50% 0;
     transform-origin: left; }
   .clock::before {
@@ -120,7 +130,7 @@ font-family: 'Vollkorn SC', serif;
     width: 45%;
     height: 3px;
     /* Thickness of the clock arm */
-    background: #4a2f12;
+    background: #b38627;
     border-radius: 0 500% 500% 0;
     transform-origin: left; }
   .clock::after {
@@ -132,7 +142,7 @@ font-family: 'Vollkorn SC', serif;
     width: 35%;
     height: 1.5px;
     /* Thickness of the clock arm */
-    background: #b38627;
+    background: #cc992c;
     border-radius: 0 50% 50% 0;
     transform-origin: left; }
 
@@ -146,8 +156,10 @@ font-family: 'Vollkorn SC', serif;
     background-color: #21478d;
     border-radius: 5px;
     padding: 0.5rem 0;
-    transition: all 0.1s; }
+    cursor: pointer;
+    transition: all 1s ease; }
     .buttons__btn:hover {
+      transition: all 0.15s ease;
       background-color: #b38627;
       color: #171e26; }
 

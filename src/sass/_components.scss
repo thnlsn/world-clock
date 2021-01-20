@@ -24,6 +24,19 @@
   }
 
   &__exact {
+    display: inline-block;
+    width: 30rem;
+    border-bottom: 2px solid $color-primary;
+    border-left: 2px solid $color-primary;
+    border-right: 2px solid $color-primary;
+
+    background: rgba($color: $color-tertiary, $alpha: 1);
+
+    padding: 1rem;
+
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+
     span {
       font-size: 60%;
       text-transform: uppercase;
@@ -87,7 +100,7 @@
     left: 50%;
     width: 30%;
     height: 6px; /* Thickness of the clock arm */
-    background: $color-secondary;
+    background: $color-primary-dark;
     border-radius: 0 50% 50% 0;
     transform-origin: left;
   }
@@ -101,7 +114,7 @@
     left: 50%;
     width: 45%;
     height: 3px; /* Thickness of the clock arm */
-    background: $color-secondary;
+    background: $color-primary;
     border-radius: 0 500% 500% 0;
     transform-origin: left;
   }
@@ -115,7 +128,7 @@
     left: 50%;
     width: 35%;
     height: 1.5px; /* Thickness of the clock arm */
-    background: $color-primary;
+    background: $color-primary-light;
     border-radius: 0 50% 50% 0;
     transform-origin: left;
   }
@@ -138,9 +151,12 @@
     border-radius: 5px;
     padding: 0.5rem 0;
 
-    transition: all 0.1s;
+    cursor: pointer;
+
+    transition: all 1s ease;
 
     &:hover {
+      transition: all 0.15s ease;
       background-color: $color-primary;
       color: $color-background;
     }

@@ -79,10 +79,20 @@ const App = () => {
       </div>
       <Buttons zones={usZones} func={updateZone} />
       <div className='links'>
-        <a className='link' href='https://github.com/thnlsn/world-clock'>
+        <a
+          className='link'
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://github.com/thnlsn/world-clock'
+        >
           <i class='fab fa-github'></i>
         </a>
-        <a className='link' href='https://www.linkedin.com/in/thnlsn/'>
+        <a
+          className='link'
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://www.linkedin.com/in/thnlsn/'
+        >
           <i class='fab fa-linkedin'></i>
         </a>
       </div>
