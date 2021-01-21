@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import moment from 'moment';
 import 'moment-timezone';
@@ -28,7 +28,7 @@ const Buttons = ({ zones, func }) => {
     <div className='buttons-container'>
       <div className='buttons'>
         {newArr.map((zone, index) => {
-          console.log(zone[1]);
+          /* console.log(zone[1]); */
           return (
             <Button zone={zone[1]} abbv={zone[0]} func={func} key={index} />
           );

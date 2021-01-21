@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsx jsx */
@@ -22,7 +22,7 @@ const Clock = ({ hours, seconds, minutes }) => {
     calcDegrees(seconds, 6, setSecDegrees);
     calcDegrees(minutes, 6, setMinDegrees);
     calcDegrees(hours, 30, setHourDegrees);
-  });
+  }, [seconds, minutes, hours]);
 
   return (
     <div className='clock-container'>

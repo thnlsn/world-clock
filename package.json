@@ -1,5 +1,6 @@
 {
   "name": "world-clock",
+  "homepage": "https://thnlsn.github.io/world-clock",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -9,6 +10,8 @@
     "@testing-library/user-event": "^7.2.1",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.31",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",

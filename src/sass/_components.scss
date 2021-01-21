@@ -66,7 +66,7 @@
       font-weight: 600;
     }
 
-    @media only screen and (max-width: $bp-phone-small) {
+    @media only screen and (max-width: $bp-phone-large) {
       background-color: transparent;
       border: none;
       width: 100%;
@@ -107,11 +107,11 @@
 
   margin: 2rem 0;
 
-  @media only screen and (max-width: $bp-phone-small) {
+  @media only screen and (max-width: $bp-phone-large) {
     height: 42vh;
     width: 42vh;
 
-    margin: 1rem 0;
+    margin: 0rem 0 1rem 0;
   }
 
   // The clock border
@@ -211,7 +211,7 @@
   grid-auto-rows: minmax(min-content, 1fr);
   gap: 1rem;
 
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0.1rem 2rem 0.1rem 2rem;
 
   @media only screen and (max-width: $bp-largest) {
     grid-template-columns: repeat(10, 1fr);
@@ -248,6 +248,7 @@
 
     /* border: 1px dotted $color-tertiary-light; */
     border: 2px dotted $color-primary-light;
+    outline: 1px dotted $color-primary; // A more professinal look
 
     cursor: pointer;
 
@@ -256,6 +257,7 @@
     &:hover {
       transition: all 0.05s;
       background-color: $color-tertiary;
+      color: #fff;
       /*       border: 1px dotted $color-primary; */
     }
 
@@ -273,6 +275,10 @@
   padding: 0 6px;
 
   transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-phone-large) {
+    font-size: 3.5rem;
+  }
 
   &:link,
   &:visited {

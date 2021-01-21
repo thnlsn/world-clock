@@ -37,8 +37,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #171e26;
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%2325303d' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-  font-family: 'Vollkorn SC', serif;
-  font-weight: 700;
+  font-family: 'Exo 2', sans-serif;
   font-size: 2.75rem;
   color: #d6eaf1;
   box-sizing: border-box;
@@ -55,7 +54,7 @@ font-family: 'Vollkorn', serif;
 font-family: 'Vollkorn SC', serif;
 */
 .heading-primary {
-  /*   font-family: 'Vollkorn SC', serif; */
+  font-family: 'Vollkorn SC', serif;
   font-size: 4.75rem;
   color: #cc992c;
   font-weight: 600;
@@ -70,7 +69,6 @@ font-family: 'Vollkorn SC', serif;
       font-size: 3rem; } }
 
 .heading-secondary {
-  font-family: 'Exo 2', sans-serif;
   letter-spacing: 0.35rem;
   font-weight: 400;
   font-size: 4rem; }
@@ -116,7 +114,7 @@ font-family: 'Vollkorn SC', serif;
     text-transform: uppercase;
     color: #cc992c;
     font-weight: 600; }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 25em) {
     .time__exact {
       background-color: transparent;
       border: none;
@@ -149,11 +147,11 @@ font-family: 'Vollkorn SC', serif;
   background-size: cover;
   background-color: #f7f7f7;
   box-shadow: -1px 2.5px 0 #785a1a, inset 0 0 40px rgba(0, 0, 0, 0.5); }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 25em) {
     .clock {
       height: 42vh;
       width: 42vh;
-      margin: 0rem 0 1rem 0; } }
+      margin: 1rem 0; } }
   .clock__hand-hinge {
     display: block;
     position: absolute;
@@ -214,7 +212,7 @@ font-family: 'Vollkorn SC', serif;
   grid-template-rows: repeat(5, minmax(min-content, 1fr));
   grid-auto-rows: minmax(min-content, 1fr);
   gap: 1rem;
-  padding: 0.1rem 2rem 0.1rem 2rem; }
+  padding: 0rem 2rem 0rem 2rem; }
   @media only screen and (max-width: 93.75em) {
     .buttons {
       grid-template-columns: repeat(10, 1fr);
@@ -242,7 +240,6 @@ font-family: 'Vollkorn SC', serif;
     justify-content: center;
     /* border: 1px dotted $color-tertiary-light; */
     border: 2px dotted #cc992c;
-    outline: 1px dotted #b38627;
     cursor: pointer;
     transition: all 1.5s ease; }
     @media only screen and (max-width: 75em) {
@@ -251,7 +248,6 @@ font-family: 'Vollkorn SC', serif;
     .buttons__btn:hover {
       transition: all 0.05s;
       background-color: #21478d;
-      color: #fff;
       /*       border: 1px dotted $color-primary; */ }
     .buttons__btn:active {
       transform: scale(0.95); }
@@ -259,9 +255,6 @@ font-family: 'Vollkorn SC', serif;
 .link {
   padding: 0 6px;
   transition: all 0.2s; }
-  @media only screen and (max-width: 31.25em) {
-    .link {
-      font-size: 3.5rem; } }
   .link:link, .link:visited {
     color: #cc992c; }
   .link:hover {

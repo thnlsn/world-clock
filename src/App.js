@@ -10,7 +10,9 @@ import Clock from './components/clock/Clock';
 import Buttons from './components/buttons/Buttons';
 
 const App = () => {
+  // Get all zones
   const usZones = moment.tz.names();
+  // Figure out what zone user is in
   const [currentZone, setCurrentZone] = useState(moment.tz.guess());
 
   moment.fn.zoneName = function () {
@@ -18,6 +20,7 @@ const App = () => {
     return abbrs[abbr] || abbr;
   };
 
+  // Set all current zone state to correct time
   const [hours, setHours] = useState(moment.tz(currentZone).format('h'));
   const [minutes, setMinutes] = useState(moment.tz(currentZone).format('m'));
   const [seconds, setSeconds] = useState(moment.tz(currentZone).format('ss'));
@@ -26,8 +29,9 @@ const App = () => {
 
   const [currentInterval, setCurrentInterval] = useState(null);
 
+  // Start interval of half a second
   const startClock = (zone) => {
-    console.log('Start Clock');
+    /*     console.log('Start Clock'); */
     setCurrentInterval(
       setInterval(() => {
         myTimer(zone);
@@ -40,11 +44,13 @@ const App = () => {
     };
   };
 
+  // Stop the interval
   const stopClock = () => {
-    console.log('Stop Clock');
+    /* console.log('Stop Clock'); */
     clearInterval(currentInterval);
   };
 
+  // Set all state to the time values of whatever zone is passed in
   const updateTime = (zone) => {
     setHours(moment.tz(zone).format('h'));
     setMinutes(moment.tz(zone).format('mm'));
@@ -53,6 +59,7 @@ const App = () => {
     setZone(moment.tz(zone).format('zz'));
   };
 
+  // Change the zone state, as well as the time, to reflect new zone then stop and start the clock again
   const updateZone = (zone) => {
     setCurrentZone(zone);
     updateTime(zone);
@@ -61,6 +68,7 @@ const App = () => {
     startClock(zone);
   };
 
+  // On page load set the current zone to users and start the clock
   useEffect(() => {
     setCurrentZone(moment.tz.guess());
     startClock();
@@ -86,7 +94,7 @@ const App = () => {
           rel='noopener noreferrer'
           href='https://github.com/thnlsn/world-clock'
         >
-          <i class='fab fa-github'></i>
+          <i className='fab fa-github'></i>
         </a>
         <a
           className='link'
@@ -94,7 +102,7 @@ const App = () => {
           rel='noopener noreferrer'
           href='https://www.linkedin.com/in/thnlsn/'
         >
-          <i class='fab fa-linkedin'></i>
+          <i className='fab fa-linkedin'></i>
         </a>
       </div>
     </div>
