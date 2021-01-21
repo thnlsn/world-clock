@@ -242,12 +242,21 @@ font-family: 'Vollkorn SC', serif;
       color: #66441f;
       border: 1px dotted #b38627; }
 
+.link {
+  padding: 0 6px;
+  transition: all 0.2s; }
+  .link:link, .link:visited {
+    color: #cc992c; }
+  .link:hover {
+    color: #785a1a; }
+
 .App {
   height: 100vh;
   display: grid;
   /*   grid-template-rows: min-content min-content 1fr 1fr min-content; */
   text-align: center;
-  border: 6px solid #cc992c; }
+  border: 6px solid #cc992c;
+  position: relative; }
 
 .clock-container {
   position: relative;
@@ -276,4 +285,6 @@ font-family: 'Vollkorn SC', serif;
     scrollbar-track-color: #785a1a; }
 
 .links {
-  display: none; }
+  position: absolute;
+  top: 1rem;
+  right: 1rem; }

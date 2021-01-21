@@ -79,7 +79,7 @@ const App = () => {
       </div>
       <Buttons zones={usZones} func={updateZone} />
       <div className='u-spacer'>&nbsp;</div>
-      {/*       <div className='links'>
+      <div className='links'>
         <a
           className='link'
           target='_blank'
@@ -96,7 +96,7 @@ const App = () => {
         >
           <i class='fab fa-linkedin'></i>
         </a>
-      </div> */}
+      </div>
     </div>
   );
 };
