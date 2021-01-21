@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31dde76f09e4fae0c623818230b9a4d7",
+    "revision": "bebf68518b87b27d2982ba184fcabf9c",
     "url": "/world-clock/index.html"
   },
   {
-    "revision": "ddfd99a78acc1235f4ea",
-    "url": "/world-clock/static/css/main.5bed3e12.chunk.css"
+    "revision": "d14078b9bb12369171d3",
+    "url": "/world-clock/static/css/main.d4585b8a.chunk.css"
   },
   {
     "revision": "8a4959dea8cddd63c45c",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/world-clock/static/js/2.aff946b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ddfd99a78acc1235f4ea",
+    "revision": "d14078b9bb12369171d3",
     "url": "/world-clock/static/js/main.1fc5249a.chunk.js"
   },
   {
