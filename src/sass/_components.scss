@@ -49,9 +49,8 @@
   &__exact {
     display: inline-block;
     width: 30rem;
+
     border-bottom: $border-width solid $color-primary-light;
-    /*     border-left: calc($border-width + 1rem) solid $color-primary-light;
-    border-right: calc($border-width + 1rem) solid $color-primary-light; */
 
     background: rgba($color: $color-background-light, $alpha: 1);
 
@@ -65,6 +64,17 @@
       text-transform: uppercase;
       color: $color-primary-light;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: $bp-phone-small) {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      text-align: start;
+      padding-left: 1.5rem;
+      span {
+        display: none;
+      }
     }
   }
 
@@ -93,14 +103,16 @@
   height: $clock-size;
   width: $clock-size;
 
-  @media only screen and (max-width: $bp-phone-small) {
-    height: 40vh;
-    width: 40vh;
-  }
-
   align-self: center;
 
   margin: 2rem 0;
+
+  @media only screen and (max-width: $bp-phone-small) {
+    height: 42vh;
+    width: 42vh;
+
+    margin: 1rem 0;
+  }
 
   // The clock border
   border: 2rem solid $color-primary-light;

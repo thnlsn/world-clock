@@ -105,8 +105,6 @@ font-family: 'Vollkorn SC', serif;
   display: inline-block;
   width: 30rem;
   border-bottom: 6px solid #cc992c;
-  /*     border-left: calc($border-width + 1rem) solid $color-primary-light;
-    border-right: calc($border-width + 1rem) solid $color-primary-light; */
   background: #192029;
   padding: 0.25rem 0rem 0.75rem 0rem;
   border-bottom-left-radius: 15%;
@@ -116,6 +114,15 @@ font-family: 'Vollkorn SC', serif;
     text-transform: uppercase;
     color: #cc992c;
     font-weight: 600; }
+  @media only screen and (max-width: 25em) {
+    .time__exact {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      text-align: start;
+      padding-left: 1.5rem; }
+      .time__exact span {
+        display: none; } }
 
 .time svg {
   height: 1rem;
@@ -142,8 +149,9 @@ font-family: 'Vollkorn SC', serif;
   box-shadow: -1px 2.5px 0 #785a1a, inset 0 0 40px rgba(0, 0, 0, 0.5); }
   @media only screen and (max-width: 25em) {
     .clock {
-      height: 40vh;
-      width: 40vh; } }
+      height: 42vh;
+      width: 42vh;
+      margin: 1rem 0; } }
   .clock__hand-hinge {
     display: block;
     position: absolute;
