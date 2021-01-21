@@ -15,6 +15,15 @@
     padding: 0;
     margin: 0;
 
+    // The space given to the zone text
+    @media only screen and (max-width: $bp-small) {
+      height: 12vh;
+    }
+    @media only screen and (max-width: $bp-phone-small) {
+      /* font-size: 1.984rem; */
+      height: 9.5vh;
+    }
+
     &:before,
     &:after {
       content: '';
@@ -25,19 +34,28 @@
       transform: translateY(50%);
       display: block;
     }
+
+    &:before {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+    &:after {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
   }
 
   // The container of the live updating time
   &__exact {
     display: inline-block;
     width: 30rem;
-    border-bottom: $border-width solid $color-primary;
-    border-left: $border-width solid $color-primary;
-    border-right: $border-width solid $color-primary;
+    border-bottom: $border-width solid $color-primary-light;
+    /*     border-left: calc($border-width + 1rem) solid $color-primary-light;
+    border-right: calc($border-width + 1rem) solid $color-primary-light; */
 
     background: rgba($color: $color-background-light, $alpha: 1);
 
-    padding: 1rem;
+    padding: 0.25rem 0rem 0.75rem 0rem;
 
     border-bottom-left-radius: 15%;
     border-bottom-right-radius: 15%;
@@ -74,6 +92,11 @@
   /*     transform: translate(-50%, -50%); */
   height: $clock-size;
   width: $clock-size;
+
+  @media only screen and (max-width: $bp-phone-small) {
+    height: 40vh;
+    width: 40vh;
+  }
 
   align-self: center;
 
