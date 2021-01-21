@@ -233,8 +233,8 @@
 
   &__btn {
     display: inline-block;
-    background-color: $color-tertiary;
-    border-radius: 5px;
+    /*     background-color: $color-tertiary;
+    border-radius: 5px; */
     padding: 0.5rem 0;
 
     // Center the text inside the buttons
@@ -246,18 +246,21 @@
       padding: 1rem 0;
     }
 
-    border: 1px dotted $color-tertiary-light;
+    /* border: 1px dotted $color-tertiary-light; */
+    border: 2px dotted $color-primary-light;
 
     cursor: pointer;
 
-    transition: all 1s ease;
+    transition: all 1.5s ease;
 
     &:hover {
-      transition: all 0.15s ease;
-      background-color: $color-primary-light;
-      color: $color-secondary-light;
+      transition: all 0.05s;
+      background-color: $color-tertiary;
+      /*       border: 1px dotted $color-primary; */
+    }
 
-      border: 1px dotted $color-primary;
+    &:active {
+      transform: scale(0.95);
     }
   }
 }

@@ -232,23 +232,25 @@ font-family: 'Vollkorn SC', serif;
       gap: 2.5rem; } }
   .buttons__btn {
     display: inline-block;
-    background-color: #21478d;
-    border-radius: 5px;
+    /*     background-color: $color-tertiary;
+    border-radius: 5px; */
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dotted #3467c4;
+    /* border: 1px dotted $color-tertiary-light; */
+    border: 2px dotted #cc992c;
     cursor: pointer;
-    transition: all 1s ease; }
+    transition: all 1.5s ease; }
     @media only screen and (max-width: 75em) {
       .buttons__btn {
         padding: 1rem 0; } }
     .buttons__btn:hover {
-      transition: all 0.15s ease;
-      background-color: #cc992c;
-      color: #66441f;
-      border: 1px dotted #b38627; }
+      transition: all 0.05s;
+      background-color: #21478d;
+      /*       border: 1px dotted $color-primary; */ }
+    .buttons__btn:active {
+      transform: scale(0.95); }
 
 .link {
   padding: 0 6px;
@@ -267,7 +269,6 @@ font-family: 'Vollkorn SC', serif;
   position: relative; }
 
 .clock-container {
-  position: relative;
   justify-self: center; }
   @media only screen and (max-width: 50em) {
     .clock-container {
