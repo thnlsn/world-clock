@@ -193,6 +193,7 @@
   @media only screen and (max-width: $bp-phone-large) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    gap: 2.5rem;
   }
 
   &__btn {

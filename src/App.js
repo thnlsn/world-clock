@@ -74,10 +74,11 @@ const App = () => {
         </span>
       </div>
       <Clock hours={hours} minutes={minutes} seconds={seconds} />
-      <div className='time u-mb-small u-bg-gradient-up'>
+      <div className='time u-pd-small u-bg-gradient-up'>
         <div className='time__zone heading-primary'>{zone}</div>
       </div>
       <Buttons zones={usZones} func={updateZone} />
+      <div className='u-spacer'>&nbsp;</div>
       {/*       <div className='links'>
         <a
           className='link'

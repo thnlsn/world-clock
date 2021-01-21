@@ -1,6 +1,10 @@
 /* Style imports (Every partial imported into here will be available app-wide) */
-.u-mb-small {
-  margin-bottom: 1rem; }
+.u-spacer {
+  height: 2rem;
+  background-color: #171e26; }
+
+.u-pd-small {
+  padding-bottom: 1rem; }
 
 .u-bg-gradient-down {
   background: linear-gradient(to bottom, #171e26, rgba(23, 30, 38, 0.5)); }
@@ -10,7 +14,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow: hidden; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.5%; } }
@@ -32,7 +37,7 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 2.75rem;
   color: #d6eaf1;
-  /* height: 100vh; */
+  box-sizing: border-box;
   /*   background-repeat: no-repeat;
   background-attachment: fixed; */ }
 
@@ -187,7 +192,8 @@ font-family: 'Vollkorn SC', serif;
   @media only screen and (max-width: 31.25em) {
     .buttons {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(5, 1fr); } }
+      grid-template-rows: repeat(5, 1fr);
+      gap: 2.5rem; } }
   .buttons__btn {
     display: inline-block;
     background-color: #21478d;
@@ -211,7 +217,7 @@ font-family: 'Vollkorn SC', serif;
 .App {
   height: 100vh;
   display: grid;
-  grid-template-rows: max-content max-content max-content 1fr;
+  grid-template-rows: min-content min-content min-content 1fr min-content;
   text-align: center;
   border: 6px solid #cc992c; }
 
@@ -220,20 +226,19 @@ font-family: 'Vollkorn SC', serif;
   justify-self: center; }
 
 .buttons-container {
+  margin-right: 1.5rem;
   background-color: #171e26;
   overflow-y: scroll;
-  margin-bottom: 2rem;
   display: grid; }
   .buttons-container::-webkit-scrollbar {
     width: 1rem;
     height: 1rem; }
   .buttons-container::-webkit-scrollbar-thumb {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: #cc992c; }
+    border-radius: 5px;
+    background-color: #cc992c;
+    background-image: -webkit-linear-gradient(45deg, #b38627 25%, transparent 25%, transparent 50%, #b38627 50%, #b38627 75%, transparent 75%, transparent); }
   .buttons-container::-webkit-scrollbar-track {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;
     background: #785a1a; }
   .buttons-container {
     scrollbar-face-color: #cc992c;

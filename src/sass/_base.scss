@@ -13,6 +13,8 @@ html {
   box-sizing: border-box; // Border-box is always good
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
 
+  overflow: hidden; // So that the page doesn't overscroll and won't display a scrollbar
+
   @media only screen and (max-width: $bp-large) {
     font-size: 56.5%;
   }
@@ -44,7 +46,7 @@ body {
   font-size: 2.75rem;
   color: $color-font;
 
-  /* height: 100vh; */
+  box-sizing: border-box;
 
   /*   background-repeat: no-repeat;
   background-attachment: fixed; */

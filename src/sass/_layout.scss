@@ -1,7 +1,8 @@
 .App {
   height: 100vh;
+
   display: grid;
-  grid-template-rows: max-content max-content max-content 1fr;
+  grid-template-rows: min-content min-content min-content 1fr min-content;
 
   text-align: center;
 
@@ -17,13 +18,11 @@
 }
 
 .buttons-container {
-  @include scrollbars(1rem, $color-primary-light, $color-primary-dark);
+  @include scrollbar(1rem, $color-primary-light, $color-primary-dark);
 
   background-color: $color-background;
 
   overflow-y: scroll;
-
-  margin-bottom: 2rem;
 
   display: grid;
 }

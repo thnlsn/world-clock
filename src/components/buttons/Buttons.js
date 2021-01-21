@@ -28,6 +28,7 @@ const Buttons = ({ zones, func }) => {
     <div className='buttons-container'>
       <div className='buttons'>
         {newArr.map((zone, index) => {
+          console.log(zone);
           return (
             <Button zone={zone[1]} abbv={zone[0]} func={func} key={index} />
           );

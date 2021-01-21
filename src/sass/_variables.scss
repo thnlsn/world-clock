@@ -17,8 +17,13 @@ $clock-size: 44.25vh;
 
 $border-width: 6px;
 
-.u-mb-small {
-  margin-bottom: 1rem;
+.u-spacer {
+  height: 2rem;
+  background-color: $color-background;
+}
+
+.u-pd-small {
+  padding-bottom: 1rem;
 }
 
 .u-bg-gradient-down {
@@ -37,11 +42,12 @@ $border-width: 6px;
   );
 }
 
-@mixin scrollbars(
+@mixin scrollbar(
   $size,
   $foreground-color,
   $background-color: mix($foreground-color, white, 50%)
 ) {
+  margin-right: 1.5rem;
   // For Google Chrome
   &::-webkit-scrollbar {
     width: $size;
@@ -49,14 +55,22 @@ $border-width: 6px;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: $foreground-color;
+    border-radius: 5px;
+    background-color: $color-primary-light;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      #b38627 25%,
+      transparent 25%,
+      transparent 50%,
+      #b38627 50%,
+      #b38627 75%,
+      transparent 75%,
+      transparent
+    );
   }
 
   &::-webkit-scrollbar-track {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;
     background: $background-color;
   }
 
