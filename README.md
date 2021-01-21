@@ -1,16 +1,20 @@
 # World Clock
 
 <p align="center">
-  <img src="https://media.giphy.com/media/h6f8QA5tk54ePIMNnB/source.gif" />
+  <img src="../assets/World Clock Demo.gif?raw=true" />
 </p>
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-Hello! This is my world clock. It is a live animated analog clock of your local time made with pure CSS (via Sass). It was originally built for a job interview take-home project, but I've since streamlined it and added timezone functionality.
+This is World Clock. It's a live updating analog style clock of your current timezone. You can click on other timezones and it will update accordingly. All the styles are made with pure CSS (with help from Sass) including the clock itself, with help from JavaScript to update the degrees of rotation for the clock hands.
+
+It was originally built as a take-home project for a job I was in the running for, in which I was tasked with making a simple counter app (with some caveats), but I decided to take it over the top by creating a fully functioning clock in which you could increment and decrement the time. Since then I have repurposed the project into what you see today.
 
 ## Live Link: [https://thnlsn.github.io/world-clock/](https://thnlsn.github.io/world-clock/)
+
+Check it out on your phone or tablet, it's fully responsive!
 
 ### Built With
 
