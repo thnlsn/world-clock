@@ -8,7 +8,7 @@
 
 ## About The Project
 
-This is World Clock. It's a live updating analog style clock of your current timezone. You can click on other timezones and it will update accordingly. It is built in React but all the styles are made with pure CSS (with help from Sass) including the clock itself, with help from JavaScript (and emotion.js) to update the degrees of rotation for the clock hands. The time and timezone data is coming from Moment.js, from which I call from at half second intervals to make sure the clock has real-time accuracy.
+This is World Clock. It's a live updating analog style clock of your current timezone. You can click on other timezones and it will update accordingly. It is built in React but all the styles are made with pure CSS (with help from Sass) including the clock itself, with help from JavaScript (and emotion.js) to update the degrees of rotation for the clock hands. The time and timezone data is coming from Moment.js, from which I call at half second intervals to make sure the clock has real-time accuracy.
 
 It was originally built as a take-home project for a job I was in the running for, in which I was tasked with making a simple counter app (with some caveats), but I decided to take it over the top by creating a fully functioning clock in which you could increment and decrement the time. Since then I have repurposed the project into what you see today.
 
