@@ -254,7 +254,7 @@
 
     cursor: pointer;
 
-    transition: all 1.5s ease;
+    transition: background-color 1.5s ease, color 1.5s ease;
 
     &:hover {
       transition: all 0.05s;
