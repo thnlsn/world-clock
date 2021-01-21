@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/world-clock/static/css/main.96392a99.chunk.css",
-    "main.js": "/world-clock/static/js/main.66b3f521.chunk.js",
-    "main.js.map": "/world-clock/static/js/main.66b3f521.chunk.js.map",
+    "main.css": "/world-clock/static/css/main.5bed3e12.chunk.css",
+    "main.js": "/world-clock/static/js/main.1fc5249a.chunk.js",
+    "main.js.map": "/world-clock/static/js/main.1fc5249a.chunk.js.map",
     "runtime-main.js": "/world-clock/static/js/runtime-main.d8b89d2a.js",
     "runtime-main.js.map": "/world-clock/static/js/runtime-main.d8b89d2a.js.map",
     "static/js/2.aff946b2.chunk.js": "/world-clock/static/js/2.aff946b2.chunk.js",
     "static/js/2.aff946b2.chunk.js.map": "/world-clock/static/js/2.aff946b2.chunk.js.map",
     "index.html": "/world-clock/index.html",
-    "precache-manifest.b7dbbc9fe579f9f841b47da672ac7198.js": "/world-clock/precache-manifest.b7dbbc9fe579f9f841b47da672ac7198.js",
+    "precache-manifest.389922f1d758d8f5ab29c229e8884119.js": "/world-clock/precache-manifest.389922f1d758d8f5ab29c229e8884119.js",
     "service-worker.js": "/world-clock/service-worker.js",
-    "static/css/main.96392a99.chunk.css.map": "/world-clock/static/css/main.96392a99.chunk.css.map",
+    "static/css/main.5bed3e12.chunk.css.map": "/world-clock/static/css/main.5bed3e12.chunk.css.map",
     "static/js/2.aff946b2.chunk.js.LICENSE.txt": "/world-clock/static/js/2.aff946b2.chunk.js.LICENSE.txt",
     "static/media/style.css": "/world-clock/static/media/clock.ec97d5ff.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d8b89d2a.js",
     "static/js/2.aff946b2.chunk.js",
-    "static/css/main.96392a99.chunk.css",
-    "static/js/main.66b3f521.chunk.js"
+    "static/css/main.5bed3e12.chunk.css",
+    "static/js/main.1fc5249a.chunk.js"
   ]
 }
